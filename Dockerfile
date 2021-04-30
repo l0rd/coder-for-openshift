@@ -6,5 +6,3 @@ RUN mkdir -p /.config && chgrp -R 0 /.config && mkdir -p /home/coder && chgrp -R
 USER 10001
 ENV HOME=/home/coder
 WORKDIR /projects
-ENTRYPOINT [ "/entrypoint.sh" ]
-CMD ["tail", "-f", "/dev/null"]
