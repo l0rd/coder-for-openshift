@@ -16,6 +16,6 @@ jobs:
           image: coder-ocp
           tags: 3.9.3, latest
           registry: ghcr.io
-          dockerfile: Dockerfile.ci
+          dockerfile: Dockerfile
           username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.GHCR_TOKEN }}
