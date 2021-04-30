@@ -19,4 +19,4 @@ Here is how it's going to look like
 
 <img width="1533" alt="image" src="https://user-images.githubusercontent.com/606959/116725887-d9665f00-a9e2-11eb-9067-ff3d3daa93c0.png">
 
-The `meta.yaml` referenced by the devfile uses the image `ghcr.io/l0rd/coder-ocp:latest` that is a patched version of [codercom/code-server:3.9.3](https://hub.docker.com/r/codercom/code-server/tags?page=1&ordering=last_updated) that starts on OpenShift (source code is [here](https://github.com/l0rd/coder-for-openshift)).
+The `meta.yaml` and the `devfile.yaml` are on [this gist](https://gist.github.com/l0rd/a16bcfda94d8e5775eb32d66da7299b2).
