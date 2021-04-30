@@ -1,0 +1,21 @@
+name: coder-for-openshift
+
+on: [push]
+
+jobs:
+  coder_for_openshift-publish-gh:
+    runs-on: ubuntu-latest
+    name: A job to build and publish a coder image that should work on OCP
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out code
+        
+      - uses: mr-smithers-excellent/docker-build-push@v5
+        name: Build & push Docker image
+        with:
+          image: coder-ocp
+          tags: 3.9.3, latest
+          registry: ghcr.io
+          dockerfile: Dockerfile.ci
+          username: ${{ secrets.GHCR_USERNAME }}
+          password: ${{ secrets.GHCR_TOKEN }}
